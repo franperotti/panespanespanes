@@ -10,16 +10,29 @@
 		<div class="container">
 			<p class="logo">Panes</p>
 			<nav>
-				<a href="#quienes-somos">Sobre nosotros</a>
-				<a href="#nuestros-panes">Catalogo</a>
-				<a href="#caracteristicas">Caracteristicas</a>
+				<button id="boton-menu">Menu</button>
+				<ul id="lista-menu">
+					<a href="#quienes-somos">Sobre nosotros</a>
+					<a href="#nuestros-panes">Catalogo</a>
+					<a href="#caracteristicas">Caracteristicas</a>
+				</ul>
 			</nav>
+			<script>
+				const botonMenu = document.getElementById('boton-menu');
+				const listaMenu = document.getElementById('lista-menu');	  
+				botonMenu.addEventListener('click', function() { if (listaMenu.style.display === 'block') {
+					listaMenu.style.display = 'none';
+} else {
+					listaMenu.style.display = 'block';
+				}
+				});
+			</script>  
 		</div>
 	</header>
 
 	<section id="hero">
-		<h1>Hacemos pan casero <br>y te lo llevamos a tu domicilio!</h1>
-		<button>VER CATALOGO</button>
+		<h1>Hacemos <span class="color-interactivo">pan casero</span><br>y te lo llevamos a tu domicilio!</h1>
+		<button id="catalogo">VER CATALOGO</button>
 	</section>
 
 	<section id="quienes-somos">
@@ -33,7 +46,7 @@
 
 	<section id="nuestros-panes">
 		<div class="container">
-			<h2>Nuestros <span class="color-acento">panes</span></h2>
+			<h2>Nuestros <span class="color-interactivo">panes</span></h2>
 			<div class="panes">
 				<div class="carta">
 					<h3>Pan 1</h3>

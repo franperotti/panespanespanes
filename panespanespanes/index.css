@@ -1,3 +1,10 @@
+:root{
+    --color-primario: #FF8500;
+    --color-secundario: #CE5500
+    ;
+}
+
+
 *{
     box-sizing: border-box;
 }
@@ -18,26 +25,29 @@ p{font-size: 1.25em;}
 ul{list-style: none;}
 
 button{
+    text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 10px;
+    padding: 12px 22px;
+    border-radius: 20px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     color: white;
-    background-color: rgb(255, 150, 0);
+    background-color: var(--color-primario);
+    text-align: center;
+    display: inline-block;
+    
 }
 
 button:hover{
-    background-color: rgb(255, 120, 0);
+    background-color: var(--color-secundario);
 }
 
 .container{
     max-width: 1400px;
     margin: auto;
 }
-
-.color-acento{ color: rgb(255, 120, 0);}
 
 header{
     background-color: rgba(30, 30, 30);
@@ -47,7 +57,7 @@ header .logo{
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
-    color: rgb(255, 150, 0);
+    color: var(--color-primario);
     font-size: 1.45em;
     font-family: system-ui;
 }
@@ -59,22 +69,29 @@ header .container{
 }
 
 header nav{
-    display: flex;
-    flex-direction: column;
     text-align: center;
     padding-bottom: 25px;
+    flex-direction: column;
 }
 
 header a{
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(255, 150, 0);
-    font-family: system-ui;
+    color: var(--color-primario);
+    font-family: sans-serif;
 }
 
 header a:hover{
-    color: rgb(255, 100, 0);
+    color: var(--color-secundario);
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #lista-menu {
+    display: block;
+    }
 }
 
 #hero{
@@ -99,6 +116,14 @@ header a:hover{
 #hero h1{
     color: white;
     font-family: system-ui;
+}
+
+.color-interactivo{
+    color: var(--color-primario);
+    text-shadow: 5px 2px 2px black;
+}
+.color-interactivo:hover{
+    color: white;
 }
 
 #hero button{
